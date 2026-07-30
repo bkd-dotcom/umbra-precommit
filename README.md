@@ -2,6 +2,7 @@
 
 **Govern coding-agent changes at the git boundary — pre-commit, pre-push, or CI.**
 
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 The universal, editor-agnostic guard for [umbra-core](https://github.com/bkd-dotcom/umbra-core):
 a deterministic pre-action check that blocks changes falling outside your repo's
 `.umbra/admission.yaml` scope, before they're committed or pushed.
