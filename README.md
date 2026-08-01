@@ -1,8 +1,11 @@
 # umbra-precommit
 
+> **Copyright (c) 2026 Binay Dalai. All rights reserved.**
+> This repository is strictly for viewing and contributing to the original project. You may not use, copy, modify, distribute, or commercialize this code for your own personal or commercial projects without explicit written permission. Only the original author retains the right to use and monetize this project.
+
+
 **Govern coding-agent changes at the git boundary — pre-commit, pre-push, or CI.**
 
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 The universal, editor-agnostic guard for [umbra-core](https://github.com/bkd-dotcom/umbra-core):
 a deterministic pre-action check that blocks changes falling outside your repo's
 `.umbra/admission.yaml` scope, before they're committed or pushed.
@@ -53,4 +56,4 @@ receipt, and `auto_merge` is always false — a human merges.
 
 ## License
 
-[MIT](LICENSE) © 2026 Binay Dalai.
+**Copyright (c) 2026 Binay Dalai. All rights reserved.** This code is not open source. You may not use, copy, modify, distribute, or commercialize it for your own personal or commercial purposes without explicit written permission from the author, who alone retains the right to use and monetize this project. See [CONTRIBUTING.md](CONTRIBUTING.md).
