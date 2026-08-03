@@ -6,7 +6,7 @@
 #       hooks:
 #         - id: umbra-guard
 #
-# Requires: pip install "umbra-core>=0.3.0"
+# Requires: pip install "umbra-core @ git+https://github.com/bkd-dotcom/umbra-core@v0.5.3"
 - id: umbra-guard
   name: Umbra guard (contract scope check)
   description: Block staged changes that fall outside .umbra/admission.yaml scope.
