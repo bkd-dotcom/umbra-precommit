@@ -12,7 +12,7 @@ a deterministic pre-action check that blocks changes falling outside your repo's
 
 Part of the [Umbra platform](https://github.com/bkd-dotcom/umbra-umbrella).
 
-> Prerequisite: `pip install "umbra-core>=0.3.0"` and a `.umbra/admission.yaml` in
+> Prerequisite: `pip install "umbra-core @ git+https://github.com/bkd-dotcom/umbra-core@v0.5.3"` and a `.umbra/admission.yaml` in
 > your repo (a conservative default applies without one).
 
 ## pre-commit
