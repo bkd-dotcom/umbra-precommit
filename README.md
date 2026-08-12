@@ -6,13 +6,13 @@
 
 **Govern coding-agent changes at the git boundary — pre-commit, pre-push, or CI.**
 
-The universal, editor-agnostic guard for [umbra-core](https://github.com/bkd-dotcom/umbra-core):
+The universal, editor-agnostic guard for [umbra-core](https://github.com/Signetry/core):
 a deterministic pre-action check that blocks changes falling outside your repo's
 `.umbra/admission.yaml` scope, before they're committed or pushed.
 
-Part of the [Umbra platform](https://github.com/bkd-dotcom/umbra-umbrella).
+Part of the [Umbra platform](https://github.com/Signetry/signetry).
 
-> Prerequisite: `pip install "umbra-core @ git+https://github.com/bkd-dotcom/umbra-core@v0.5.4"` and a `.umbra/admission.yaml` in
+> Prerequisite: `pip install "umbra-core @ git+https://github.com/Signetry/core@v0.5.4"` and a `.umbra/admission.yaml` in
 > your repo (a conservative default applies without one).
 
 ## pre-commit
@@ -21,7 +21,7 @@ Add to your `.pre-commit-config.yaml`:
 
 ```yaml
 repos:
-  - repo: https://github.com/bkd-dotcom/umbra-precommit
+  - repo: https://github.com/Signetry/precommit
     rev: v0.3.0
     hooks:
       - id: umbra-guard
@@ -51,7 +51,7 @@ Try it: `demos/try-guard.sh`.
 
 A local hook is best-effort defense-in-depth (a developer can `--no-verify`). The
 enforced gate is the **Umbra Admission** required check on the PR:
-<https://github.com/bkd-dotcom/umbra-action>. Nothing merges without a signed
+<https://github.com/Signetry/action>. Nothing merges without a signed
 receipt, and `auto_merge` is always false — a human merges.
 
 ## License

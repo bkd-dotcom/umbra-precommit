@@ -6,7 +6,7 @@
 # .umbra/admission.yaml, showing forbidden paths/commands blocked and an in-scope
 # path allowed. Deterministic (umbra-core), never the model.
 #
-# Requirements: bash, git, and `pip install "umbra-core @ git+https://github.com/bkd-dotcom/umbra-core@v0.5.4"`.
+# Requirements: bash, git, and `pip install "umbra-core @ git+https://github.com/Signetry/core@v0.5.4"`.
 #
 # Usage:  bash demos/try-guard.sh
 set -euo pipefail
