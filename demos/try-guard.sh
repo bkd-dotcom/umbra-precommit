@@ -1,24 +1,24 @@
 #!/usr/bin/env bash
 #
-# See the universal Umbra guard in action — WITHOUT any editor.
+# See the universal Signetry guard in action — WITHOUT any editor.
 #
-# Drives universal/umbra-guard.sh against a throwaway repo with a sample
-# .umbra/admission.yaml, showing forbidden paths/commands blocked and an in-scope
-# path allowed. Deterministic (umbra-core), never the model.
+# Drives universal/signetry-guard.sh against a throwaway repo with a sample
+# .signetry/admission.yaml, showing forbidden paths/commands blocked and an in-scope
+# path allowed. Deterministic (signetry-core), never the model.
 #
-# Requirements: bash, git, and `pip install "umbra-core @ git+https://github.com/Signetry/core@v0.5.4"`.
+# Requirements: bash, git, and `pip install "signetry-core @ git+https://github.com/Signetry/core@v0.6.0"`.
 #
 # Usage:  bash demos/try-guard.sh
 set -euo pipefail
 
-GUARD="$(cd "$(dirname "${BASH_SOURCE[0]}")/../universal" && pwd)/umbra-guard.sh"
+GUARD="$(cd "$(dirname "${BASH_SOURCE[0]}")/../universal" && pwd)/signetry-guard.sh"
 
 WORK="$(mktemp -d)"
 trap 'rm -rf "$WORK"' EXIT
 
 git -C "$WORK" init -q
-mkdir -p "$WORK/src" "$WORK/.umbra"
-cat > "$WORK/.umbra/admission.yaml" <<'YAML'
+mkdir -p "$WORK/src" "$WORK/.signetry"
+cat > "$WORK/.signetry/admission.yaml" <<'YAML'
 version: 1
 allowed_paths:
   - "src/**"
@@ -29,7 +29,7 @@ forbidden_paths:
 YAML
 
 echo "============================================================"
-echo " Umbra universal guard — deterministic pre-action check"
+echo " Signetry universal guard — deterministic pre-action check"
 echo " Contract: allow src/**  ·  forbid deploy.yml / .env / *.pem"
 echo "============================================================"
 echo
@@ -53,6 +53,6 @@ fire 'Edit "src/app.js" (in scope)'  --path src/app.js
 
 echo "============================================================"
 echo " Forbidden actions were blocked; the in-scope edit was allowed."
-echo " The decision came from deterministic code (umbra-core), not a"
+echo " The decision came from deterministic code (signetry-core), not a"
 echo " model. auto_merge is always false — a human merges."
 echo "============================================================"
