@@ -6,11 +6,9 @@ Follows [Keep a Changelog](https://keepachangelog.com/) / [SemVer](https://semve
 
 ### Changed
 
-- Rebranded the platform from Umbra to Signetry: CLI `umbra` → `signetry`, env
-  `UMBRA_*` → `SIGNETRY_*`, config `.umbra/` → `.signetry/`, package
-  `umbra-core` → `signetry-core`, and the sibling `umbra-reviewer` →
-  `signetry-reviewer`. Renamed `universal/umbra-guard.sh` → `universal/signetry-guard.sh`
-  and updated the pre-commit hook `id` `umbra-guard` → `signetry-guard`.
+- Signetry naming: CLI `signetry`, env `SIGNETRY_*`, config `.signetry/`, package
+  `signetry-core`, and the sibling `signetry-reviewer`. The guard script is
+  `universal/signetry-guard.sh` and the pre-commit hook `id` is `signetry-guard`.
 
 ## [0.3.0] — 2026-07-26
 
