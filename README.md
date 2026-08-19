@@ -12,7 +12,7 @@ a deterministic pre-action check that blocks changes falling outside your repo's
 
 Part of the [Signetry platform](https://github.com/Signetry/signetry).
 
-> Prerequisite: `pip install "signetry-core @ git+https://github.com/Signetry/core@v0.6.0"` and a `.signetry/admission.yaml` in
+> Prerequisite: `pip install "signetry-core @ git+https://github.com/Signetry/core@v0.7.0"` and a `.signetry/admission.yaml` in
 > your repo (a conservative default applies without one).
 
 ## pre-commit
