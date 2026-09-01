@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Governance engine (contracts, guard, verifier, receipts)
+    url: https://github.com/Signetry/core/issues
+    about: Policy semantics live in signetry-core. This repo is a thin wrapper over it.
+  - name: The enforced CI gate
+    url: https://github.com/Signetry/action/issues
+    about: The required Signetry Admission check on a pull request.
+  - name: Signetry platform (overview, licensing, roadmap)
+    url: https://github.com/Signetry/signetry
+    about: Cross-repo questions, and the open-core licensing model.
+  - name: Report a security vulnerability
+    url: https://github.com/Signetry/precommit/security/advisories/new
+    about: Private disclosure. Please never use a public issue for an unpatched vulnerability.

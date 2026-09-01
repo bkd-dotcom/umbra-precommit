@@ -1,0 +1,62 @@
+name: Feature request
+description: Propose a change to the guard wrapper, the pre-commit hook contract, or the docs.
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This repo is **Apache-2.0** — proposals and PRs are welcome. See
+        [CONTRIBUTING.md](https://github.com/Signetry/precommit/blob/main/CONTRIBUTING.md).
+
+        Two constraints shape what fits here:
+
+        - **The guard is deterministic.** Every verdict comes from `signetry guard` and
+          your `.signetry/admission.yaml` — never from a model.
+        - **No policy reimplementation.** This repo pins `signetry-core` and defers to
+          it. Contract semantics belong in
+          [signetry-core](https://github.com/Signetry/core).
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What can't you do today? Describe the situation, not the solution.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - universal/signetry-guard.sh
+        - pre-commit hook contract (.pre-commit-hooks.yaml)
+        - demos
+        - Documentation
+        - CI / workflows
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Including whether this belongs in `signetry-core` or another integration repo instead.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: This does not require the guard to consult a model for a verdict.
+          required: true
+        - label: I'd be willing to open a PR for this (optional — no obligation).
+          required: false
