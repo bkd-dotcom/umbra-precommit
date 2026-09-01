@@ -46,7 +46,7 @@ The guard itself is a POSIX shell wrapper — there is no build step and no Pyth
 package in this repo. It shells out to the `signetry` CLI, so install the engine first:
 
 ```bash
-pip install "signetry-core @ git+https://github.com/Signetry/core@v0.7.0"
+pip install "signetry-core @ git+https://github.com/Signetry/core@v0.8.0"
 ```
 
 Then exercise the guard end-to-end against a throwaway repo with a sample

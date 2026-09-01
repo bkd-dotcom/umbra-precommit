@@ -2,7 +2,20 @@
 
 Follows [Keep a Changelog](https://keepachangelog.com/) / [SemVer](https://semver.org/).
 
-## [Unreleased]
+## [0.4.0] — 2026-09-01
+
+> First release **tagged in this repository**. The `0.3.0` entry below describes a
+> release cut in the pre-move repo, whose tag did not survive the org move — see the
+> `Fixed` note.
+
+### Fixed — the documented pre-commit install could not resolve
+
+- `README.md` and `.pre-commit-hooks.yaml` both told users `rev: v0.3.0`, and
+  `pre-commit` resolves `rev` as a git ref **in this repository**, which has no tags
+  at all: the tag from the `0.3.0` release lived in the pre-move repo and did not
+  come across. So the primary documented install path failed outright with a
+  revision error — not a fallback, not a warning. Both now say `v0.4.0`, the tag this
+  release actually creates.
 
 ### Changed
 
