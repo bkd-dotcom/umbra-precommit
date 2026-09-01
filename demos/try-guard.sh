@@ -6,7 +6,7 @@
 # .signetry/admission.yaml, showing forbidden paths/commands blocked and an in-scope
 # path allowed. Deterministic (signetry-core), never the model.
 #
-# Requirements: bash, git, and `pip install "signetry-core @ git+https://github.com/Signetry/core@v0.7.0"`.
+# Requirements: bash, git, and `pip install "signetry-core @ git+https://github.com/Signetry/core@v0.8.0"`.
 #
 # Usage:  bash demos/try-guard.sh
 set -euo pipefail
