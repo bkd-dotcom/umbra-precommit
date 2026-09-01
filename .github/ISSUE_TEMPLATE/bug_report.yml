@@ -1,0 +1,75 @@
+name: Bug report
+description: The guard blocked something it should have allowed, allowed something it should have blocked, or crashed.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. Two things first:
+
+        - **Policy semantics live in [signetry-core](https://github.com/Signetry/core).**
+          If the contract itself is being evaluated wrongly (scope, forbidden paths,
+          gates, receipts), file it there. This repo is the thin shell wrapper around
+          `signetry guard`.
+        - **Suspected vulnerability?** Do not open an issue — see
+          [SECURITY.md](https://github.com/Signetry/precommit/blob/main/SECURITY.md)
+          and use private reporting.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What did the guard do, and what did you expect instead?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: surface
+    attributes:
+      label: How was the guard invoked?
+      options:
+        - pre-commit hook (id: signetry-guard)
+        - universal/signetry-guard.sh --staged
+        - universal/signetry-guard.sh --path
+        - universal/signetry-guard.sh --command
+        - universal/signetry-guard.sh --stdin-json
+        - demos/try-guard.sh
+        - Other / not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction
+      description: The exact command you ran and its output. A minimal case is ideal.
+      render: shell
+    validations:
+      required: true
+
+  - type: textarea
+    id: contract
+    attributes:
+      label: Your .signetry/admission.yaml
+      description: The relevant part of the contract in play. Redact anything sensitive.
+      render: yaml
+
+  - type: textarea
+    id: versions
+    attributes:
+      label: Versions
+      description: |
+        Output of `signetry --version`, this repo's `rev:` or commit, `bash --version`, and your OS.
+      render: shell
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: "`signetry-core` is installed and `signetry` is on PATH (a missing binary fails open unless `SIGNETRY_GUARD_STRICT=1`)."
+          required: true
+        - label: I have read the note above and this is a wrapper bug, not core policy behavior.
+          required: false
